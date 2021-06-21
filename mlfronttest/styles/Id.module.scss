@@ -1,0 +1,53 @@
+@use 'helpers/mixins';
+@use 'helpers/variables';
+
+.container {
+    @include mixins.basic-container;
+    background: #fff;
+    margin-top: variables.$spaceLg;
+    article{
+        display:flex;
+        padding: 0 variables.$spaceLg;
+    }
+}
+.description{
+    h3{
+        margin-bottom: variables.$spaceLg;
+        font-size: mixins.em(28);
+        font-weight: 400;
+    }
+    p{
+        color: variables.$medLight;
+        font-size: mixins.em(16);
+        margin-bottom: variables.$spaceLg;
+    }
+    img{
+        margin: variables.$spaceLg 0;
+        min-width:100%;
+    }
+}
+.sideBar{
+    min-width: 25%;
+    .info{
+        color: variables.$medLight;
+        font-size: mixins.em(14);
+        margin: variables.$spaceLg 0 variables.$spaceMd;
+    }
+    h2{
+        font-size: mixins.em(24);
+        margin: 0 0 variables.$spaceLg;
+    }
+    .price{
+        font-size: mixins.em(46);
+        margin: variables.$spaceLg 0;
+    }
+    button{
+        border: none;
+        background: variables.$mlBlue;
+        border-radius: 4px;
+        color: #fff;
+        font-size: mixins.em(18);
+        padding: mixins.em(10) 0;
+        width: 100%;
+    }
+}

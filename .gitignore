@@ -1,0 +1,35 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+mlfronttest/node_modules
+API/node_modules
+/.pnp
+.pnp.js
+
+# testing
+mlfronttest/coverage
+
+# next.js
+mlfronttest/.next/
+mlfronttest/out/
+
+# production
+mlfronttest/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+mlfronttest/npm-debug.log*
+mlfronttest/yarn-debug.log*
+mlfronttest/yarn-error.log*
+
+# local env files
+mlfronttest/.env.local
+mlfronttest/.env.development.local
+mlfronttest/.env.test.local
+mlfronttest/.env.production.local
+
+# vercel
+mlfronttest/.vercel

@@ -1,0 +1,37 @@
+@use 'helpers/variables';
+@use 'helpers/mixins';
+
+.header{
+    background-color: variables.$mlYellow;
+}
+.container {
+    display:flex;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: variables.$spaceMd/2 0;
+    form{
+        display: flex;
+        align-items: stretch;
+        flex-grow: 2;
+        input{
+            color: variables.$medLight;
+            flex-grow: 2;
+            font-size: mixins.em(18);
+            padding: mixins.em(9, 18) 0 mixins.em(9, 18) mixins.em(20, 18);
+        }
+        button{
+            padding: 0 variables.$spaceMd;
+            &:hover{
+                background-color: variables.$medDark;
+            }
+        }
+        input, button{
+            border: none;
+        }
+    }
+}
+
+.logo{
+    margin-right: variables.$spaceLg;
+}

@@ -1,0 +1,22 @@
+@use 'helpers/mixins';
+@use 'helpers/variables';
+
+.container{
+    @include mixins.basic-container;
+    ul{
+        display: flex;
+        align-items: flex-end;
+        font-size: mixins.em(14);
+        margin-top: variables.$spaceMd;
+        margin-bottom: variables.$spaceMd;
+        padding: 0;
+        width: 100%;
+        li{
+            list-style: none;
+            p{
+                margin: 0 mixins.em(10) 0 0;
+                color: variables.$medLight;
+            }
+        }
+    }
+}
