@@ -27,7 +27,7 @@ const Header = () =>{
                         <img src="/Logo_ML.png" srcSet="/Logo_ML@2x.png 2x" alt="Logo Mercadolibre"/>
                     </a>
                 </Link>
-                <form onSubmit={searchProduct} method="GET">
+                <form onSubmit={searchProduct} method="GET" role="searchForm">
                     <input 
                         id="search" 
                         name="search" 

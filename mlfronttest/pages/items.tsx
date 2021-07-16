@@ -29,6 +29,7 @@ interface itemsTypes{
 }
 
 const Items = ({ results: { categories, items} }: itemsTypes) =>{
+
   return (
     <>
       <Head>
@@ -43,7 +44,7 @@ const Items = ({ results: { categories, items} }: itemsTypes) =>{
 
       <main className={styles.container}>
         <ul>
-          {items.map( (item, index) => {
+          {items.map( item => {
             const uniq = uuidv4()
             const price = new Intl.NumberFormat('es-AR', { style: 'currency', currency: item.price.currency })
                           .format(item.price.amount + item.price.decimals)
@@ -83,8 +84,8 @@ const Items = ({ results: { categories, items} }: itemsTypes) =>{
 
 export default Items
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const {query: { search }} = context;
+export const getServerSideProps: GetServerSideProps = async ({query}) => {
+  const { search } = query;
   const res = await fetch(`http://localhost:8080/api/items?search=${search}`)
   const results: [] = await res.json()
   return {
